@@ -152,6 +152,7 @@
   fullscreen.addEventListener("click", function (e) {
     e.preventDefault();
     sidebar.classList.toggle("d-none");
+    theathreView.classList.toggle("miniscreen");
     theathreView.classList.toggle("fullscreen");
   });
 })();
