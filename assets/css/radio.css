@@ -1,10 +1,6 @@
 :root {
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #37423b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #388da8; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #ffffff;
+  --accent-color: #388da8;
 }
 
 /* Card */
@@ -44,6 +40,11 @@
   background-color: rgba(255, 255, 255, 0.6);
 }
 
+.radio-stations .card:hover {
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+  cursor: pointer;
+  border: none !important;
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -53,9 +54,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: start;
-  color: var(--default-color);
 }
 
 .hero .hero-bg {
@@ -106,7 +105,67 @@
     font-size: 18px;
   }
 }
+.radio-page {
+  width: 70%;
+}
 
-.progress-bar {
+.radio-stations .info-card {
+  padding-bottom: 10px;
+}
+
+.current-radio {
+  font-size: 14px;
+}
+
+.current-radio .table thead {
+  background: #f6f6fe;
+}
+
+.current-radio .table thead th {
+  border: 0;
+}
+.current-radio .table thead th i:hover {
+  cursor: pointer;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
   background-color: var(--accent-color);
+  border-radius: 50%;
+  color: white;
+}
+
+.current-radio .table tbody td {
+  vertical-align: middle;
+}
+
+.current-radio img {
+  border-radius: 5px;
+  max-width: 60px;
+}
+
+/* virtualizer */
+
+.virtualizer-box {
+  text-align: center;
+  width: 95%;
+}
+
+#visualizer-placeholder {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.bar {
+  width: 2px;
+  height: 5px;
+  background-color: var(--accent-color);
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    height: 2px;
+  }
+  to {
+    height: 50px;
+  }
 }

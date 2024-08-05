@@ -1,17 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("visualizer-container");
+window.onload = () => {
+  const visualizer = document.getElementById("visualizer-placeholder");
+  const barCount = Math.floor(visualizer.clientWidth / 6); // Adjust the divisor for more or fewer bars
 
-  for (let i = 1; i <= 1000; i++) {
+  for (let i = 0; i < barCount; i++) {
     const bar = document.createElement("div");
     bar.classList.add("bar");
-    bar.style.setProperty("--i", i);
-    container.appendChild(bar);
+    bar.style.animationDelay = `${i * 0.1}s`;
+    visualizer.appendChild(bar);
   }
-
-  // Start the animation after a short delay
-  setTimeout(() => {
-    document.querySelectorAll(".bar").forEach((bar) => {
-      bar.style.animationPlayState = "running";
-    });
-  }, 500); // Adjust the delay as needed
-});
+};
