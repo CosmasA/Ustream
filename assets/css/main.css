@@ -11,6 +11,7 @@
   --default-color: #444444;
   --heading-color: #37423b;
   --accent-color: #388da8;
+  --accent-color-hover: #46b3d4;
   --surface-color: #ffffff;
   --contrast-color: #ffffff;
 }
@@ -382,4 +383,24 @@ h6 {
 .radio-avator {
   height: 25vh;
   border: 1px solid var(--default-color);
+}
+
+.btn {
+  background-color: var(--accent-color) !important;
+  border: none !important;
+  color: white !important;
+}
+.btn:hover {
+  background-color: var(--accent-color-hover) !important;
+}
+
+.btn-outline-primary {
+  background-color: transparent !important;
+  border: 1px solid var(--accent-color) !important;
+  color: var(--accent-color) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--accent-color) !important;
+  color: white !important;
 }

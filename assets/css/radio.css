@@ -57,6 +57,10 @@
   justify-content: start;
 }
 
+.index-hero {
+  height: 100vh !important;
+}
+
 .hero .hero-bg {
   position: absolute;
   inset: 0;

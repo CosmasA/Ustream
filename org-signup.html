@@ -26,9 +26,24 @@
     />
     <!-- Template Main CSS File -->
     <link href="assets/css/accounts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/main.css" />
   </head>
 
   <body>
+    <header
+      id="header"
+      class="header d-flex align-items-center sticky-top justify-content-center border-bottom"
+    >
+      <div
+        class="logo ms-5 d-flex align-items-center justify-content-center"
+        id="logo"
+      >
+        <h1><a href="/index.html">USTREAM</a></h1>
+      </div>
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-center"
+      ></div>
+    </header>
     <main>
       <div class="container">
         <section
@@ -39,25 +54,14 @@
               <div
                 class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center"
               >
-                <div class="d-flex justify-content-center py-4">
-                  <a
-                    href="index.html"
-                    class="logo d-flex align-items-center w-auto"
-                  >
-                    <span class="d-none d-lg-block">USTREAM</span>
-                  </a>
-                </div>
                 <!-- End Logo -->
 
                 <div class="card mb-3 border">
                   <div class="card-body">
                     <div class="pt-4 pb-2">
-                      <h5 class="card-title text-center pb-0 fs-4">
-                        Create an Account
+                      <h5 class="card-title text-start pb-0 fs-6">
+                        Create an Organisation Account.
                       </h5>
-                      <p class="text-center small">
-                        Enter organization details to create account
-                      </p>
                     </div>
 
                     <form class="row g-3 needs-validation" novalidate>
@@ -151,10 +155,6 @@
                         <p class="small mb-0">
                           Already have an account?
                           <a href="org-login.html">Log in</a>
-                        </p>
-                        <p class="small mb-0 mt-3">
-                          Back to
-                          <a href="index.html">Home</a>
                         </p>
                       </div>
                     </form>
